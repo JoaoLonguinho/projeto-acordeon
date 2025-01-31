@@ -32,10 +32,9 @@
       </article>
       <ul>
         <div>
-          <li data-toggle="first"><span>What is Frontend Mentor, and how will it help me?</span> <img src="assets/images/icon-plus.svg" id="img-first-plus"
-              alt="">
-              <img src="assets/images/icon-minus.svg" id="img-first-minus"
-              alt="">
+          <li data-toggle="first"><span>What is Frontend Mentor, and how will it help me?</span> <img
+              src="assets/images/icon-plus.svg" id="img-first-plus" alt="">
+            <img src="assets/images/icon-minus.svg" id="img-first-minus" alt="">
           </li>
         </div>
         <hr>
@@ -46,10 +45,8 @@
         </p>
         <div>
           <li data-toggle="sec">
-            <span>Is Frontend Mentor free?</span> <img src="assets/images/icon-plus.svg" id="img-sec-plus"
-            alt="">
-            <img src="assets/images/icon-minus.svg" id="img-sec-minus"
-            alt="">
+            <span>Is Frontend Mentor free?</span> <img src="assets/images/icon-plus.svg" id="img-sec-plus" alt="">
+            <img src="assets/images/icon-minus.svg" id="img-sec-minus" alt="">
           </li>
         </div>
         <hr>
@@ -58,10 +55,10 @@
           option providing access to a range of projects suitable for all skill levels.
         </p>
         <div>
-          <li data-toggle="th"><span>Can I use Frontend Mentor projects in my portfolio?</span> <img src="assets/images/icon-plus.svg" id="img-th-plus"
-            alt="">
-            <img src="assets/images/icon-minus.svg" id="img-th-minus"
-            alt=""></li>
+          <li data-toggle="th"><span>Can I use Frontend Mentor projects in my portfolio?</span> <img
+              src="assets/images/icon-plus.svg" id="img-th-plus" alt="">
+            <img src="assets/images/icon-minus.svg" id="img-th-minus" alt="">
+          </li>
         </div>
         <hr>
         <p id="th-desc">
@@ -70,10 +67,10 @@
         </p>
 
         <div>
-          <li data-toggle="f"><span>How can I get help if I'm stuck on a Frontend Mentor challenge?</span> <img src="assets/images/icon-plus.svg" id="img-f-plus"
-            alt="">
-            <img src="assets/images/icon-minus.svg" id="img-f-minus"
-            alt=""></li>
+          <li data-toggle="f"><span>How can I get help if I'm stuck on a Frontend Mentor challenge?</span> <img
+              src="assets/images/icon-plus.svg" id="img-f-plus" alt="">
+            <img src="assets/images/icon-minus.svg" id="img-f-minus" alt="">
+          </li>
         </div>
         <p id="f-desc">
           The best place to get help is inside Frontend Mentor's Discord community. There's a help
@@ -87,24 +84,25 @@
     </section>
   </main>
 
-  
+
   <script>
     function toggleOption(id) {
       let opt = document.getElementById(`${id}-desc`);
       let imgPlus = document.getElementById(`img-${id}-plus`);
       let imgMinus = document.getElementById(`img-${id}-minus`);
-  
+
       opt.classList.toggle('showHide');
       imgPlus.classList.toggle('hideShow');
       imgMinus.classList.toggle('showHide');
     }
+
     document.querySelectorAll('[data-toggle]').forEach(button => {
-      button.addEventListener('click', function() {
+      button.addEventListener('click', function () {
         toggleOption(this.dataset.toggle);
       });
     });
   </script>
-  
+
 </body>
 
 </html>
