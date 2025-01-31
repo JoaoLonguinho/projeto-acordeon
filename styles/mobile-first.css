@@ -63,10 +63,9 @@ li span{
 }
 li:hover{
     cursor: pointer;
-    transform: scale(1.1);
     transition: 0.2s;
 }
-#img-one-minus, #img-t-minus ,#img-th-minus, #img-f-minus{
+#img-first-minus, #img-sec-minus ,#img-th-minus, #img-f-minus{
     display: none;
 }
 /* classe de exibir e ocultar */

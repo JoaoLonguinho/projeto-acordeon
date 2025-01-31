@@ -32,9 +32,9 @@
       </article>
       <ul>
         <div>
-          <li onclick="showOpt()"><span>What is Frontend Mentor, and how will it help me?</span> <img src="assets/images/icon-plus.svg" id="img-one-plus"
+          <li data-toggle="first"><span>What is Frontend Mentor, and how will it help me?</span> <img src="assets/images/icon-plus.svg" id="img-first-plus"
               alt="">
-              <img src="assets/images/icon-minus.svg" id="img-one-minus"
+              <img src="assets/images/icon-minus.svg" id="img-first-minus"
               alt="">
           </li>
         </div>
@@ -45,10 +45,10 @@
           all levels and ideal for portfolio building.
         </p>
         <div>
-          <li onclick="showOptt()">
-            <span>Is Frontend Mentor free?</span> <img src="assets/images/icon-plus.svg" id="img-t-plus"
+          <li data-toggle="sec">
+            <span>Is Frontend Mentor free?</span> <img src="assets/images/icon-plus.svg" id="img-sec-plus"
             alt="">
-            <img src="assets/images/icon-minus.svg" id="img-t-minus"
+            <img src="assets/images/icon-minus.svg" id="img-sec-minus"
             alt="">
           </li>
         </div>
@@ -58,7 +58,7 @@
           option providing access to a range of projects suitable for all skill levels.
         </p>
         <div>
-          <li onclick="showOptth()"><span>Can I use Frontend Mentor projects in my portfolio?</span> <img src="assets/images/icon-plus.svg" id="img-th-plus"
+          <li data-toggle="th"><span>Can I use Frontend Mentor projects in my portfolio?</span> <img src="assets/images/icon-plus.svg" id="img-th-plus"
             alt="">
             <img src="assets/images/icon-minus.svg" id="img-th-minus"
             alt=""></li>
@@ -70,7 +70,7 @@
         </p>
 
         <div>
-          <li onclick="showOptf()"><span>How can I get help if I'm stuck on a Frontend Mentor challenge?</span> <img src="assets/images/icon-plus.svg" id="img-f-plus"
+          <li data-toggle="f"><span>How can I get help if I'm stuck on a Frontend Mentor challenge?</span> <img src="assets/images/icon-plus.svg" id="img-f-plus"
             alt="">
             <img src="assets/images/icon-minus.svg" id="img-f-minus"
             alt=""></li>
@@ -89,39 +89,22 @@
 
   
   <script>
-    let optO = document.getElementById('first-desc')
-    let imgO = document.getElementById('img-one-plus')
-    let imgOM = document.getElementById('img-one-minus')
-    function showOpt(){
-      optO.classList.toggle('showHide')
-      imgO.classList.toggle('hideShow')
-      imgOM.classList.toggle('showHide')
+    function toggleOption(id) {
+      let opt = document.getElementById(`${id}-desc`);
+      let imgPlus = document.getElementById(`img-${id}-plus`);
+      let imgMinus = document.getElementById(`img-${id}-minus`);
+  
+      opt.classList.toggle('showHide');
+      imgPlus.classList.toggle('hideShow');
+      imgMinus.classList.toggle('showHide');
     }
-    let optT = document.getElementById('sec-desc')
-    let imgT = document.getElementById('img-t-plus')
-    let imgTM = document.getElementById('img-t-minus')
-    function showOptt(){
-      optT.classList.toggle('showHide')
-      imgT.classList.toggle('hideShow')
-      imgTM.classList.toggle('showHide')
-    }
-    let optTh = document.getElementById('th-desc')
-    let imgTh = document.getElementById('img-th-plus')
-    let imgThM = document.getElementById('img-th-minus')
-    function showOptth(){
-      optTh.classList.toggle('showHide')
-      imgTh.classList.toggle('hideShow')
-      imgThM.classList.toggle('showHide')
-    }
-    let optF = document.getElementById('f-desc')
-    let imgF = document.getElementById('img-f-plus')
-    let imgFM = document.getElementById('img-f-minus')
-    function showOptf(){
-      optF.classList.toggle('showHide')
-      imgF.classList.toggle('hideShow')
-      imgFM.classList.toggle('showHide')
-    }
+    document.querySelectorAll('[data-toggle]').forEach(button => {
+      button.addEventListener('click', function() {
+        toggleOption(this.dataset.toggle);
+      });
+    });
   </script>
+  
 </body>
 
 </html>
