@@ -65,10 +65,7 @@ li:hover{
     cursor: pointer;
     transition: 0.2s;
 }
-li:hover img{
-    transform: scale(1.2);
-    transition: 0.3s;
-}
+
 #img-first-minus, #img-sec-minus ,#img-th-minus, #img-f-minus{
     display: none;
 }

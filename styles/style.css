@@ -5,4 +5,8 @@
     main section{
         width: 552px;
     }
+    li:hover img{
+        transform: scale(1.5);
+        transition: 0.3s;
+    }
 }
