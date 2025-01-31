@@ -23,6 +23,7 @@ main{
     justify-content: center;
     align-items: center;
     padding: 24px;
+    box-sizing: border-box;
 }
 main section{
     background-color: white;
