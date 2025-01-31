@@ -76,3 +76,6 @@ li:hover{
 .hideShow{
     display: none !important;
 }
+.attribution{
+    margin-top: 24px;
+}
